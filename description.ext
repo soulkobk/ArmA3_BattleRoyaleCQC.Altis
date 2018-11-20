@@ -1,0 +1,24 @@
+author = "BATTLEROYALEGAMES FT SOULKOBK";
+onLoadName = "BATTLE ROYALE CQC";
+onLoadMission = "                     BATTLE ROYALE CLOSE QUARTERS COMBAT";
+joinUnassigned = 0;
+respawn = "BASE";	
+respawndelay = 5;
+enableDebugConsole = 1;
+disabledAI = 1;
+allowFunctionsRecompile = 1;
+showMap = 0;
+disableChannels[]={0,1,2,3,4,5,6};
+onPauseScript = "Clients\Scripts\onPause.sqf";
+skipLobby = 1;
+saving = 0;
+respawnDialog = 0;
+
+class Header
+{
+	gameType = LastMan;
+	minPlayers = 1;
+	maxPlayers = 32;
+};
+
+#include "cfgFunctions.hpp"
