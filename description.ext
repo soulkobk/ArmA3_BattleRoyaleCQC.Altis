@@ -1,0 +1,75 @@
+/*
+	----------------------------------------------------------------------------------------------
+File: description.ext
+Author: soulkobk (soulkobk.blogspot.com)
+Last modified: 20:20 PM 14/07/2021
+Description: https://community.bistudio.com/wiki/Description.ext
+	----------------------------------------------------------------------------------------------
+*/
+
+author = "soulkobk";									// Visible when loading mission
+onLoadName = "Battle Royale CQC";								// Visible when loading mission
+onLoadMission = "soulkobk.blogspot.com";
+loadScreen = "images\BRCQC_loadingBanner.jpg";										// Visible when loading mission
+overviewPicture = "images\BRCQC_loadingBanner.jpg";									// Visible when selecting mission
+onLoadIntro = "";										// Displays a message while the intro is loading.
+onLoadIntroTime = 0;									// Time and date displayed while the intro loads. 1 visible, 0 hidden.
+onLoadMissionTime = 0;									// Time and date displayed while the mission loads. 1 visible, 0 hidden.
+disabledAI = 1;											// No AI in playable units
+aiKills = 0; 											// disable scorelist for AI players
+enableItemsDropping = 0; 								// disabled with 0
+joinUnassigned = 0;										// 0 = players forced into role on join
+showUAVFeed = 1;										// Enables/Disables the UAV Feed.
+showGroupIndicator = 0;
+showSquadRadar = 0;
+forceRotorLibSimulation = 0;							// Rotor Lib - temporarily disabled (A3 1.66)
+scriptedPlayer = 1;
+skipLobby = 1;
+
+corpseManagerMode = 0;
+corpseLimit = 25;
+corpseRemovalMinTime = 180;
+corpseRemovalMaxTime = 300;
+
+wreckManagerMode = 0;
+wreckLimit = 10;
+wreckRemovalMinTime = 180;
+wreckRemovalMaxTime = 300;
+minPlayerDistance = 100;
+
+allowFunctionsRecompile = 0;
+
+onPauseScript = "";
+
+reviveMode = 0;                         // 0: disabled, 1: enabled, 2: controlled by player attributes
+reviveUnconsciousStateMode = 0;         // 0: basic, 1: advanced, 2: realistic
+reviveRequiredTrait = 1;                // 0: none, 1: medic trait is required
+reviveRequiredItems = 1;                // 0: none, 1: medkit, 2: medkit or first aid kit
+reviveRequiredItemsFakConsumed = 0;     // 0: first aid kit is not consumed upon revive, 1: first aid kit is consumed
+reviveDelay = 20;                       // time needed to revive someone (in secs)
+reviveMedicSpeedMultiplier = 2;         // speed multiplier for revive performed by medic
+reviveForceRespawnDelay = 5;            // time needed to perform force respawn (in secs)
+reviveBleedOutDelay = 300;              // unconscious state duration (in secs)
+
+respawn = 3;											// 0 = none. 1 = bird. 2 = instant where died. 3 = base or respawn_west marker. 4 = respawn with team, or bird. 5 = into AI or bird.
+respawnDelay = 5;										// Delay prior to respawn
+respawnDialog = 0;										// default = 1. show respawn timer and scoreboard when killed.
+respawnTemplates[] = {"BASE"};
+respawnOnStart = 0;
+respawnButton = 1;
+
+class Header
+{
+	gameType = LASTMAN;					// Unknown, COOP, DM, TDM, CTF, SC, CTI, RPG, Sandbox, Seize, Defend.
+	minPlayers = 2;						// Min # of players the MISSION supports
+	maxPlayers = 32;					// Max # of players the MISSION supports, not server slots. Make sure # is greater than server slots.
+};
+
+class CfgFunctions
+{
+	class BRCQC
+	{
+		#include "functions\client\CfgFunctions.hpp"
+		#include "functions\server\CfgFunctions.hpp"
+	};
+};

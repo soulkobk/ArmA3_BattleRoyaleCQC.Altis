@@ -1,0 +1,2434 @@
+version=54;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=37;
+	class ItemIDProvider
+	{
+		nextID=181;
+	};
+	class MarkerIDProvider
+	{
+		nextID=4;
+	};
+	class Camera
+	{
+		pos[]={11199.182,204.19362,8701.6338};
+		dir[]={0.16767325,-0.73864585,0.65290737};
+		up[]={0.18372986,0.67409366,0.71543062};
+		aside[]={0.96857059,-7.4505806e-009,-0.24873877};
+	};
+};
+binarizationWanted=0;
+sourceName="OWP_BattleRoyaleCQC";
+addons[]=
+{
+	"A3_Characters_F",
+	"A3_Characters_F_Exp_Civil",
+	"A3_Ui_F",
+	"A3_Modules_F_Curator_Curator"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=4;
+		class Item0
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Characters_F_Exp";
+			name="Arma 3 Apex - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
+			className="A3_Modules_F_Curator";
+			name="Arma 3 Zeus Update - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+	};
+};
+randomSeed=680188;
+class ScenarioData
+{
+	author="soulkobk";
+	briefing=0;
+	debriefing=0;
+	showUAVFeed=0;
+	saving=0;
+	disabledAI=1;
+	joinUnassigned=0;
+	class Header
+	{
+		gameType="LastMan";
+		minPlayers=2;
+		maxPlayers=32;
+	};
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=1;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="None";
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=1;
+	};
+	class Category1
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="EnableDebugConsole";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		nAttributes=1;
+	};
+};
+class Mission
+{
+	assetType="Free";
+	class Intel
+	{
+		briefingName="Battle Royale CQC";
+		resistanceWest=0;
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=67;
+		class Item0
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11204,182.42343,8728.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=1;
+					type="C_man_1";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male02GRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=0;
+		};
+		class Item1
+		{
+			dataType="Marker";
+			position[]={11211,181.80078,8711};
+			name="respawn_civilian";
+			type="Empty";
+			id=68;
+			atlOffset=-0.60922241;
+		};
+		class Item2
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={11201,182.41,8718};
+			};
+			name="zeus_loggedInAdmin";
+			id=69;
+			type="ModuleCurator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="#LoggedInAdmin";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item3
+		{
+			dataType="Marker";
+			position[]={21393.871,19.93499,16356.63};
+			name="BRCQC_mkr_playZone_0";
+			type="Empty";
+			id=102;
+			atlOffset=0.00023269653;
+		};
+		class Item4
+		{
+			dataType="Marker";
+			position[]={20946.857,44.24649,16941.014};
+			name="BRCQC_mkr_playZone_1";
+			type="Empty";
+			id=103;
+			atlOffset=0.00023269653;
+		};
+		class Item5
+		{
+			dataType="Marker";
+			position[]={21703.203,15.075666,7561.7119};
+			name="BRCQC_mkr_playZone_10";
+			type="Empty";
+			id=104;
+			atlOffset=0.00023269653;
+		};
+		class Item6
+		{
+			dataType="Marker";
+			position[]={20814.762,34.968872,6733.1377};
+			name="BRCQC_mkr_playZone_11";
+			type="Empty";
+			id=105;
+			atlOffset=0.00023269653;
+		};
+		class Item7
+		{
+			dataType="Marker";
+			position[]={16649.906,17.24794,16117.727};
+			name="BRCQC_mkr_playZone_12";
+			type="Empty";
+			id=106;
+			atlOffset=0.00023269653;
+		};
+		class Item8
+		{
+			dataType="Marker";
+			position[]={16323.411,22.325455,17211.592};
+			name="BRCQC_mkr_playZone_13";
+			type="Empty";
+			id=107;
+			atlOffset=0.00023269653;
+		};
+		class Item9
+		{
+			dataType="Marker";
+			position[]={14473.168,20.485981,17649.422};
+			name="BRCQC_mkr_playZone_14";
+			type="Empty";
+			id=108;
+			atlOffset=0.00023269653;
+		};
+		class Item10
+		{
+			dataType="Marker";
+			position[]={14014.501,26.570442,18686.828};
+			name="BRCQC_mkr_playZone_15";
+			type="Empty";
+			id=109;
+			atlOffset=0.00023269653;
+		};
+		class Item11
+		{
+			dataType="Marker";
+			position[]={12961.955,28.037096,15049.279};
+			name="BRCQC_mkr_playZone_16";
+			type="Empty";
+			id=110;
+			atlOffset=0.00023269653;
+		};
+		class Item12
+		{
+			dataType="Marker";
+			position[]={12580.174,13.688785,14340.871};
+			name="BRCQC_mkr_playZone_17";
+			type="Empty";
+			id=111;
+			atlOffset=0.00023269653;
+		};
+		class Item13
+		{
+			dataType="Marker";
+			position[]={11148.499,40.908642,14566.396};
+			name="BRCQC_mkr_playZone_18";
+			type="Empty";
+			id=112;
+			atlOffset=0.00017166138;
+		};
+		class Item14
+		{
+			dataType="Marker";
+			position[]={11758.287,12.435335,13677.57};
+			name="BRCQC_mkr_playZone_19";
+			type="Empty";
+			id=113;
+			atlOffset=0.00023269653;
+		};
+		class Item15
+		{
+			dataType="Marker";
+			position[]={18833.996,29.612402,16587.342};
+			name="BRCQC_mkr_playZone_2";
+			type="Empty";
+			id=114;
+			atlOffset=0.00023269653;
+		};
+		class Item16
+		{
+			dataType="Marker";
+			position[]={10994.727,26.871349,13441.438};
+			name="BRCQC_mkr_playZone_20";
+			type="Empty";
+			id=115;
+			atlOffset=0.00016593933;
+		};
+		class Item17
+		{
+			dataType="Marker";
+			position[]={10668.624,16.684093,12244.84};
+			name="BRCQC_mkr_playZone_21";
+			type="Empty";
+			id=116;
+			atlOffset=0.00023269653;
+		};
+		class Item18
+		{
+			dataType="Marker";
+			position[]={9075.2207,20.255604,11966.252};
+			name="BRCQC_mkr_playZone_22";
+			type="Empty";
+			id=117;
+			atlOffset=0.00023269653;
+		};
+		class Item19
+		{
+			dataType="Marker";
+			position[]={9320.6084,117.59196,15907.229};
+			name="BRCQC_mkr_playZone_23";
+			type="Empty";
+			id=118;
+			atlOffset=0.00022125244;
+		};
+		class Item20
+		{
+			dataType="Marker";
+			position[]={5098.7793,48.808132,11238.805};
+			name="BRCQC_mkr_playZone_24";
+			type="Empty";
+			id=119;
+			atlOffset=0.00023269653;
+		};
+		class Item21
+		{
+			dataType="Marker";
+			position[]={4134.8447,52.009674,11754.858};
+			name="BRCQC_mkr_playZone_25";
+			type="Empty";
+			id=120;
+			atlOffset=0.00023269653;
+		};
+		class Item22
+		{
+			dataType="Marker";
+			position[]={3605.6924,12.509504,13002.83};
+			name="BRCQC_mkr_playZone_26";
+			type="Empty";
+			id=121;
+			atlOffset=0.00023269653;
+		};
+		class Item23
+		{
+			dataType="Marker";
+			position[]={3791.0645,19.883018,13781.968};
+			name="BRCQC_mkr_playZone_27";
+			type="Empty";
+			id=122;
+			atlOffset=0.00023269653;
+		};
+		class Item24
+		{
+			dataType="Marker";
+			position[]={4896.5557,77.723106,16156.486};
+			name="BRCQC_mkr_playZone_28";
+			type="Empty";
+			id=123;
+			atlOffset=0.00023651123;
+		};
+		class Item25
+		{
+			dataType="Marker";
+			position[]={7134.5029,119.22939,16470.168};
+			name="BRCQC_mkr_playZone_29";
+			type="Empty";
+			id=124;
+			atlOffset=0.00023651123;
+		};
+		class Item26
+		{
+			dataType="Marker";
+			position[]={18089.174,24.440376,15229.698};
+			name="BRCQC_mkr_playZone_3";
+			type="Empty";
+			id=125;
+			atlOffset=0.00023269653;
+		};
+		class Item27
+		{
+			dataType="Marker";
+			position[]={8634.3311,181.22437,18274.666};
+			name="BRCQC_mkr_playZone_30";
+			type="Empty";
+			id=126;
+			atlOffset=0.00022888184;
+		};
+		class Item28
+		{
+			dataType="Marker";
+			position[]={12386.085,22.070648,15708.305};
+			name="BRCQC_mkr_playZone_31";
+			type="Empty";
+			id=127;
+			atlOffset=0.00023269653;
+		};
+		class Item29
+		{
+			dataType="Marker";
+			position[]={25669.766,19.897142,21326.844};
+			name="BRCQC_mkr_playZone_4";
+			type="Empty";
+			id=128;
+			atlOffset=0.00023269653;
+		};
+		class Item30
+		{
+			dataType="Marker";
+			position[]={27019.424,21.100521,23187.738};
+			name="BRCQC_mkr_playZone_5";
+			type="Empty";
+			id=129;
+			atlOffset=0.00023269653;
+		};
+		class Item31
+		{
+			dataType="Marker";
+			position[]={16827.633,24.000233,12667.28};
+			name="BRCQC_mkr_playZone_6";
+			type="Empty";
+			id=130;
+			atlOffset=0.00023269653;
+		};
+		class Item32
+		{
+			dataType="Marker";
+			position[]={19407.377,39.052902,13244.636};
+			name="BRCQC_mkr_playZone_7";
+			type="Empty";
+			id=131;
+			atlOffset=0.00023269653;
+		};
+		class Item33
+		{
+			dataType="Marker";
+			position[]={20274.27,53.450344,11668.125};
+			name="BRCQC_mkr_playZone_8";
+			type="Empty";
+			id=132;
+			atlOffset=0.00023269653;
+		};
+		class Item34
+		{
+			dataType="Marker";
+			position[]={20485.244,34.346745,8845.2705};
+			name="BRCQC_mkr_playZone_9";
+			type="Empty";
+			id=133;
+			atlOffset=0.00023269653;
+		};
+		class Item35
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={11201,182.41,8714};
+			};
+			name="zeus_soulkobk_76561198044020915";
+			id=134;
+			type="ModuleCurator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="76561198044020915";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item36
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11203,182.43542,8728.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=3;
+					type="C_man_1";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=135;
+		};
+		class Item37
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11202,182.44743,8728.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=5;
+					type="C_man_1";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=136;
+		};
+		class Item38
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11201,182.45943,8728.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=7;
+					type="C_man_1";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=137;
+		};
+		class Item39
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11200,182.47144,8728.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=9;
+					type="C_man_1";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=138;
+		};
+		class Item40
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11199,182.47745,8728.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=11;
+					type="C_man_1";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=139;
+		};
+		class Item41
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11198,182.47745,8728.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=13;
+					type="C_man_1";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=140;
+		};
+		class Item42
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11197,182.45943,8728.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=15;
+					type="C_man_1";
+					atlOffset=0.031204224;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=141;
+			atlOffset=0.031204224;
+		};
+		class Item43
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11204,182.42343,8726.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=17;
+					type="C_man_1";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=142;
+		};
+		class Item44
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11203,182.43542,8726.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=19;
+					type="C_man_1";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=143;
+		};
+		class Item45
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11202,182.44743,8726.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=21;
+					type="C_man_1";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=144;
+		};
+		class Item46
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11201,182.45943,8726.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=23;
+					type="C_man_1";
+					atlOffset=0.0059967041;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=145;
+			atlOffset=0.0059967041;
+		};
+		class Item47
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11200,182.42343,8726.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=25;
+					type="C_man_1";
+					atlOffset=-0.029998779;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=146;
+			atlOffset=-0.029998779;
+		};
+		class Item48
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11199,182.43542,8726.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=27;
+					type="C_man_1";
+					atlOffset=-0.018005371;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=147;
+			atlOffset=-0.018005371;
+		};
+		class Item49
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11198,182.44743,8726.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=29;
+					type="C_man_1";
+					atlOffset=-0.0059967041;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=148;
+			atlOffset=-0.0059967041;
+		};
+		class Item50
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11197,182.45943,8726.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=31;
+					type="C_man_1";
+					atlOffset=0.055221558;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=149;
+			atlOffset=0.055221558;
+		};
+		class Item51
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11204,182.42343,8724.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=33;
+					type="C_man_1";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=150;
+		};
+		class Item52
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11203,182.43542,8724.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=35;
+					type="C_man_1";
+					atlOffset=0.0059814453;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=151;
+			atlOffset=0.0059814453;
+		};
+		class Item53
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11202,182.44743,8724.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=37;
+					type="C_man_1";
+					atlOffset=0.017990112;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=152;
+			atlOffset=0.017990112;
+		};
+		class Item54
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11201,182.45943,8724.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=39;
+					type="C_man_1";
+					atlOffset=0.029983521;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=153;
+			atlOffset=0.029983521;
+		};
+		class Item55
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11200,182.42944,8724.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=41;
+					type="C_man_1";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=154;
+		};
+		class Item56
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11199,182.43542,8724.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=43;
+					type="C_man_1";
+					atlOffset=0.0059814453;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=155;
+			atlOffset=0.0059814453;
+		};
+		class Item57
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11198,182.44743,8724.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=45;
+					type="C_man_1";
+					atlOffset=0.017990112;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=156;
+			atlOffset=0.017990112;
+		};
+		class Item58
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11197,182.45943,8724.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=47;
+					type="C_man_1";
+					atlOffset=0.079208374;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=157;
+			atlOffset=0.079208374;
+		};
+		class Item59
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11204,182.42343,8722.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=49;
+					type="C_man_1";
+					atlOffset=0.011993408;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=158;
+			atlOffset=0.011993408;
+		};
+		class Item60
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11203,182.43542,8722.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=51;
+					type="C_man_1";
+					atlOffset=0.023986816;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=159;
+			atlOffset=0.023986816;
+		};
+		class Item61
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11202,182.44743,8722.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=53;
+					type="C_man_1";
+					atlOffset=0.035995483;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=160;
+			atlOffset=0.035995483;
+		};
+		class Item62
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11201,182.45943,8722.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=55;
+					type="C_man_1";
+					atlOffset=0.047988892;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=161;
+			atlOffset=0.047988892;
+		};
+		class Item63
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11200,182.42343,8722.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=57;
+					type="C_man_1";
+					atlOffset=0.011993408;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=162;
+			atlOffset=0.011993408;
+		};
+		class Item64
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11199,182.43542,8722.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=59;
+					type="C_man_1";
+					atlOffset=0.023986816;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=163;
+			atlOffset=0.023986816;
+		};
+		class Item65
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11198,182.44743,8722.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=61;
+					type="C_man_1";
+					atlOffset=0.035995483;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=164;
+			atlOffset=0.035995483;
+		};
+		class Item66
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11197,182.45943,8722.0498};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						description="BRCQC Contender";
+						isPlayable=1;
+					};
+					id=63;
+					type="C_man_1";
+					atlOffset=0.045333862;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=165;
+			atlOffset=0.045333862;
+		};
+	};
+};
